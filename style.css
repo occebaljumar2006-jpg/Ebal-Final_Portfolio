@@ -1,0 +1,1307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8; /* Page background */
+}
+
+/* Navbar Container */
+.navbar {
+   background-color: #f4a7bb;
+    height: 100px;
+    position: fixed;      
+    top: 0;               
+    left: 0;             
+    width: 100%;         
+    display: flex;       
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 40px;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;       
+}
+
+/* Left Logo Pill */
+.logo-container {
+    background: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-dot {
+    width: 25px;
+    height: 25px;
+    background-color: #d13d7c;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-logo {
+    color: #d13d7c;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.sub-logo {
+    font-family: 'Great Vibes', cursive;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: -2px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: 40px;
+    background-color: #ffffff; /* Puti nga background */
+    padding: 10px 25px;      /* Space sa sulod sa puti nga box */
+    border-radius: 50px;     /* Para mahimong pill shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gamay nga shadow para nindot */
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(105, 24, 24, 0.3);
+    transition: color 0.3s ease, transform 0.3sease;
+    display: inline-block;
+}
+
+.nav-links li a:hover {
+    color: #d13d7c;
+    text-shadow: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Modako ang shadow */
+    transform: scale(1.02); 
+}
+
+.nav-links li a:active {
+    color: #eb7fa0;
+    transform: scale(0.95);   
+    transition: 0.1s;  
+}    
+
+.active-link {
+    color: #eb7fa0 !important;
+    font-weight: 700;
+}
+
+/* Right Side Emblem */
+.emblem-container {
+    background: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.emblem {
+    width: 80%;
+    height: auto;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* You can replace this with a burger menu later */
+    }
+}
+
+/* Hero Section Layout */
+.hero-section {
+    background: linear-gradient(135deg, #fbb8cc 0%, #f4a7bb 50%, #f08cb1 100%);
+    min-height: calc(100vh - 100px);
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Left Content Styling */
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.line-decorator {
+    width: 60px;
+    height: 4px;
+    background-color: #7c4d5c; /* Darker accent line */
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.name-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 5px;
+}
+
+.major-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.role-title {
+    font-size: 2.2rem;
+    color: #a3001e; /* Deep red/burgundy from image */
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* Buttons & Socials */
+.hero-btns {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-get-touch {
+    background-color: #eb7fa0;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.btn-get-touch:hover {
+    background-color: #d13d7c;
+    transform: translateY(-2px);
+}
+
+.social-pill {
+    background: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.social-pill img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s;
+}
+
+.social-pill img:hover {
+    transform: scale(1.2);
+}
+
+/* Image Section Styling */
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image-border-frame {
+    width: 450px;
+    height: 500px;
+    border: 8px solid #d13d7c; /* Pink border from image */
+    border-radius: 120px 120px 120px 120px; /* Custom rounded shape */
+    overflow: hidden;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+}
+
+.profile-img {
+    /* Siguraduha nga husto ang size sa imong pic */
+    width: 435px; 
+    height: 500px;
+    border-radius: 25px; /* Smooth rounded corners */
+    
+    /* Smooth Transition Setup */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.6s ease,
+                filter 0.6s ease;
+    
+    /* Default State */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    filter: grayscale(20%); /* Optional: medyo dark gamay sa sugod */
+    cursor: pointer;
+}
+
+/* Mao ni ang mahitabo inig hover */
+.profile-img:hover {
+    transform: scale(1.05); /* Smooth zoom (5% increase) */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Deep shadow effect */
+    filter: grayscale(0%);  /* Mobalik ang full color inig zoom */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-text {
+        margin-top: 40px;
+    }
+    .line-decorator {
+        margin: 0 auto 15px;
+    }
+    .hero-btns {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hero-image-wrapper {
+        justify-content: center;
+    }
+    .image-border-frame {
+        width: 300px;
+        height: 350px;
+    }
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* About Section Background */
+.about-section {
+    background: linear-gradient(180deg, #fbb8cc 0%, #f4a7bb 100%);
+    padding: 100px 10%;
+    min-height: 100vh;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 60px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.title-accent {
+    color: #d13d7c; /* Darker pink from image */
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Image Styling */
+.about-image-card {
+    background: rgba(124, 77, 92, 0.3); /* Muted dark pink frame shadow */
+    padding: 10px;
+    border-radius: 60px;
+}
+
+.image-inner-border {
+    border: 5px solid #d13d7c;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 380px;
+    height: 520px;
+}
+
+.image-inner-border img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Content Styling */
+.about-text-content {
+    flex: 1;
+}
+
+.sub-heading {
+    font-size: 2.2rem;
+    color: #d13d7c;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-description {
+    color: white;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.name-highlight {
+    color: #d13d7c;
+    font-weight: 800;
+}
+
+/* Personal Info Grid */
+.personal-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-circle {
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+}
+
+.info-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: #d13d7c;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.value {
+    color: white;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Tablet & Mobile Responsiveness */
+@media (max-width: 1100px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image-card {
+        margin-bottom: 40px;
+    }
+    .personal-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Skills/Interest Section */
+.interest-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;  
+}
+
+.skills-card {
+    background-color: #ffffff; /* Puti nga background */
+    padding: 50px;
+    border-radius: 50px;      /* Rounded corners parehas sa gusto nimo */
+    box-shadow: 0 10px 30px rgba(174, 10, 10, 0.1); /* Shadow effect */
+    width: 85%;               /* Gilapdon sa card */
+    max-width: 1000px;
+    margin: 0 auto;           /* Sigurado nga tunga gyud siya */
+}
+
+.skills-header {
+    font-size: 2.8rem;
+    color: #d13d7c; /* Dark pink from image */
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Interest Pills */
+.interest-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.pill {
+    background: #f4a7bb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.pill:hover {
+    transform: translateY(-5px);
+}
+
+/* Progress Bar Stats */
+.stats-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.stat-item {
+    margin-bottom: 25px;
+}
+
+.stat-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: #d13d7c;
+    border-radius: 50%;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.progress-bg {
+    width: 100%;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* Responsive Fix */
+@media (max-width: 600px) {
+    .skills-header { font-size: 2rem; }
+    .pill { font-size: 0.9rem; padding: 10px 18px; }
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    padding: 60px 5%;
+    background-color: #fbb8cc; /* Main pink background */
+    text-align: left;
+}
+
+.hobbies-title {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Flex Grid for the Vertical Columns */
+.hobbies-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* The Vertical Pill Container */
+.hobby-column {
+    background-color: rgba(188, 93, 131, 0.6); /* Muted pink/purple from image */
+    padding: 20px 15px;
+    border-radius: 60px; /* High radius for the pill look */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 160px; /* Consistent width for each column */
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Individual Image Cards */
+.hobby-card {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hobby-card:hover {
+    transform: scale(1.05);
+}
+
+/* Special adjustments for longer columns */
+.hobby-column:nth-child(3) {
+    background-color: rgba(228, 116, 161, 0.7);
+}
+
+/* Responsive view for phones */
+@media (max-width: 768px) {
+    .hobbies-grid {
+        gap: 10px;
+    }
+    .hobby-column {
+        width: 45%; /* Two columns per row on mobile */
+        border-radius: 40px;
+    }
+    .hobbies-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    padding: 60px 5%;
+    background-color: #fbb8cc; /* Matching the overall pink theme */
+}
+
+.gallery-title {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Large horizontal container with rounded corners */
+.gallery-container {
+    background-color: rgba(188, 93, 131, 0.6); /* Muted purple-pink from image */
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto; /* Allows scrolling if images exceed width */
+}
+
+/* Individual Image Styling */
+.gallery-item {
+    flex: 1;
+    min-width: 180px; /* Ensures images don't get too small */
+    height: 320px; /* Fixed height for a uniform look */
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image to fill the frame perfectly */
+    display: block;
+}
+
+/* Interaction: Hover effect */
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* Custom Scrollbar for the gallery container */
+.gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-container::-webkit-scrollbar-thumb {
+    background: #d13d7c;
+    border-radius: 10px;
+}
+
+/* Responsive view */
+@media (max-width: 1024px) {
+    .gallery-container {
+        padding: 20px;
+    }
+    .gallery-item {
+        min-width: 150px;
+        height: 250px;
+    }
+}
+
+/* Academic Section Container */
+.academic-section {
+    padding: 100px 5%;
+    background: linear-gradient(135deg, #fbb8cc 0%, #f4a7bb 100%);
+    display: flex;
+    justify-content: center;
+}
+
+/* The Main White Card */
+.academic-card {
+    background: white;
+    width: 100%;
+    max-width: 1200px;
+    padding: 60px 80px;
+    border-radius: 80px; /* Matching the soft rounded corners */
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+}
+
+.academic-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Left Title Styling */
+.academic-header {
+    flex: 1;
+}
+
+.academic-main-title {
+    font-size: 3.8rem;
+    color: #d13d7c;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+/* Right Side List */
+.academic-entries {
+    flex: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.edu-category {
+    color: #d13d7c;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* The Pink Pill Containers */
+.edu-pill {
+    background-color: #f4a7bb;
+    padding: 25px 35px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Perfectly Circular Logos */
+.school-logo-circle {
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid #d13d7c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; /* Prevents oval shape */
+    overflow: hidden;
+    padding: 10px;
+}
+
+.school-logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Text Detail Styling */
+.edu-details {
+    color: #222;
+}
+
+.edu-period {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.school-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 3px 0;
+}
+
+.edu-course {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.edu-divider {
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin: 12px 0;
+}
+
+/* Responsive Logic */
+@media (max-width: 1024px) {
+    .academic-content { flex-direction: column; }
+    .academic-card { padding: 40px; border-radius: 40px; }
+    .edu-pill { flex-direction: column; text-align: center; }
+}
+
+/* Achievements Container */
+.achievements-section {
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #fbb8cc 0%, #f4a7bb 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.achievements-container {
+    background: white;
+    width: 100%;
+    max-width: 1100px;
+    padding-bottom: 60px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Pink Header Bar */
+.achievements-header {
+    background-color: #f4a7bb;
+    padding: 15px 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.achievements-title {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Main Award Image Styling */
+.awards-showcase {
+    padding: 0 60px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main-cert-frame {
+    border: 5px solid #f4a7bb;
+    border-radius: 30px;
+    overflow: hidden;
+    max-width: 550px;
+    margin: 0 auto 25px;
+}
+
+.main-cert-frame img {
+    width: 100%;
+    display: block;
+}
+
+.achievement-intro {
+    color: #d13d7c;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Achievement Projects Grid */
+.achievement-projects {
+    display: flex;
+    gap: 40px;
+    padding: 0 60px;
+}
+
+.achieve-project-card {
+    flex: 1;
+    text-align: center;
+}
+
+.project-pill-frame {
+    border: 5px solid #f4a7bb;
+    border-radius: 40px; /* Pill shape */
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    margin-bottom: 20px;
+}
+
+.project-pill-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.achieve-project-title {
+    color: #d13d7c;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.achieve-project-desc {
+    color: #d13d7c;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 850px) {
+    .achievement-projects { flex-direction: column; }
+    .achievements-container { padding: 0 20px 40px; }
+}
+
+/* Projects Section Container */
+.projects-section {
+    padding: 60px 5%;
+    background: linear-gradient(135deg, #fbb8cc 0%, #f4a7bb 100%);
+    display: flex;
+    justify-content: center;
+}
+
+/* The Main Content Card */
+.projects-card {
+    background: white;
+    width: 100%;
+    max-width: 1200px;
+    padding-bottom: 60px;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden; /* Keeps the header bar corners clean */
+}
+
+/* The Pink Header Bar at the top */
+.projects-header-bar {
+    background-color: #f4a7bb;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.projects-header-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Grid for the 3 Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 40px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Rounded Pill Frames for Images */
+.project-img-frame {
+    border: 6px solid #f4a7bb;
+    border-radius: 50px; /* Signature "Pill" shape */
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Project Titles beneath frames */
+.project-label {
+    color: #d13d7c;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Responsive for Mobile Devices */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .projects-card {
+        padding-bottom: 40px;
+    }
+}
+
+/* Skills Page Layout */
+.skills-page {
+    padding: 80px 10%;
+    background: linear-gradient(to bottom, #f9a8bd, #f78da7); /* Matches pink background */
+    text-align: center;
+}
+
+.skills-main-title {
+    font-family: 'Arial Black', sans-serif;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* Grid Grid (3 columns) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Glass-morphism Skill Card */
+.skill-card {
+    background: rgba(139, 101, 114, 0.7); /* Dark semi-transparent background */
+    border-radius: 40px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Header inside Card */
+.skill-card-header {
+    background-color: #f4a7bb; /* Pink header box */
+    width: 100%;
+    border-radius: 25px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-title {
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* White Icon Box */
+.skill-icon-container {
+    background: white;
+    width: 130px;
+    height: 130px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.skill-icon-container img {
+    max-width: 85%;
+    height: auto;
+}
+
+/* Description Text */
+.skill-text {
+    color: white;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+/* Responsiveness for Tablets and Phones */
+@media (max-width: 992px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .skills-grid { grid-template-columns: 1fr; }
+}
+
+/* Reset and Container */
+.portfolio-contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center; 
+    min-height: 100vh;    
+    padding: 50px 0;        
+    width: 100% ;
+    background: #f896c4 !important; /* Forces the pink background from your gallery */
+}
+
+
+/* The Frame */
+.glass-frame-container {
+    background: linear-gradient(135deg, #d3cfe2 0%, #3e407a 100%) !important;
+    width: 100%;
+    max-width: 1150px;
+    border-radius: 65px; /* Matches the extreme rounding in design */
+    padding: 70px 50px;
+    display: flex;
+    gap: 40px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.contact-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.col-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    letter-spacing: 1px;
+}
+
+/* The Dark Inner Boxes */
+.inner-dark-surface {
+    background: rgba(30, 31, 50, 0.75);
+    border-radius: 50px;
+    padding: 50px 40px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.main-greet {
+    color: white;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.sub-text {
+    color: #ccc;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Icon Row Styles */
+.contact-entry {
+    display: flex;
+    align-items: center;
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.icon-circle {
+    background: white;
+    color: #222;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+/* Form Styling */
+.ui-contact-form input, 
+.ui-contact-form textarea {
+    width: 100%;
+    background: #141526; /* Darker than the box */
+    border: none;
+    border-radius: 35px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1rem;
+    /* The "Shadow" inside the inputs */
+    box-shadow: inset 0 6px 12px rgba(0,0,0,0.7);
+}
+
+.ui-contact-form textarea {
+    resize: none;
+    border-radius: 40px;
+}
+
+/* The Send Button */
+.btn-wrap {
+    text-align: center;
+    width: 100%;
+}
+
+.ui-send-btn {
+    background: #141526;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.ui-send-btn:hover {
+    background: #252745;
+    transform: translateY(-3px);
+}
+
+/* Fix for mobile stacking */
+@media (max-width: 950px) {
+    .glass-frame-container {
+        flex-direction: column;
+        padding: 40px 25px;
+        border-radius: 40px;
+    }
+}
+
+/* Footer Section Styling */
+.portfolio-footer {
+    padding: 60px 5% 40px; /* Space around the footer */
+    background: #fbb8cc; /* Background color of the page section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Pink Pill-Shaped Container */
+.footer-container {
+    background-color: #f4a7bb; /* Exact pink from the design */
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 80px; /* Large, smooth rounded corners */
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Soft professional shadow */
+}
+
+/* Main Text Header */
+.footer-title {
+    color: white;
+    font-size: 3.5rem; /* Large and bold */
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+/* Secondary Information */
+.footer-details p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5px 0;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive Scaling for Smaller Screens */
+@media (max-width: 768px) {
+    .footer-container {
+        border-radius: 40px;
+        padding: 30px 15px;
+    }
+    .footer-title {
+        font-size: 2rem;
+    }
+    .footer-details p {
+        font-size: 1rem;
+    }
+}
+
+/* Removes default link colors and underlines */
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
